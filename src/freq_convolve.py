@@ -45,5 +45,5 @@ plt.plot(alpha_x,np.abs(Y_ifft[params.M-1:params.N]))
 plt.vlines(x =round((params.phi_signal * 180) / np.pi), ymin = min(np.abs(Y_ifft[params.M-1:params.N])), ymax = max(np.abs(Y_ifft[params.M-1:params.N])),
            colors = 'purple',
            label = 'vline_multiple - full height')
-plt.title("График зависимости Y_ifft от угла фазирования (угол прихода сигнала = "+str(round((params.phi_signal * 180) / np.pi))+")\n Параметры: Количество ПЭ N = "+str(params.N)+", частота = "+str(params.frequency_FFT)+"\n Количество направлений фазирования = "+str(params.N-params.M+1))
+plt.title("График сигнального отклика системы формирования веера ПКН (угол прихода сигнала = "+str(round((params.phi_signal * 180) / np.pi))+")\n Параметры: Количество ПЭ N = "+str(params.N)+", частота = "+str(params.frequency_FFT)+"\n Количество направлений фазирования = "+str(params.N-params.M+1))
 plt.show()
